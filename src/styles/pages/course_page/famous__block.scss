@@ -1,0 +1,45 @@
+@import "../../media/media-mixins";
+
+.famous{
+  &__grid{
+    display: grid;
+    grid-template-columns: calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6);
+    @include _1250{
+      grid-template-columns: calc(100% / 4) calc(100% / 4) calc(100% / 4) calc(100% / 4) ;
+    }
+    @include _768{
+      grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3) ;
+    }
+    @include _600{
+      grid-template-columns: calc(100% / 2) calc(100% / 2) ;
+    }
+    @include _480{
+      grid-template-columns: 100% ;
+    }
+  }
+  &__item{
+    font-size: 12px;
+    padding: 5px 20px;
+    background-color: #222222;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  &__img{
+    display: flex;
+    align-items: center;
+  }
+  &__span{
+    margin: 2px 10px;
+  }
+  &__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__chart{
+    display: flex;
+    align-items: center;
+    margin: auto 10px;
+  }
+}
+

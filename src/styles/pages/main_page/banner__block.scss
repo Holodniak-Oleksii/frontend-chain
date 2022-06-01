@@ -1,0 +1,112 @@
+@import '../../mixins/flexes';
+@import '../../variables/colors';
+@import "../../media/media-mixins";
+
+.banner{
+  background: $gradient_black;
+  &__flex{
+    @include flex_space();
+    padding: 50px 0;
+    margin-top: 50px;
+    @include _1024{
+      padding: 20px 0;
+      margin-top: 20px;
+    }
+    @include _600{
+      flex-direction: column;
+    }
+  }
+  &__pad{
+    padding: 0 50px;
+    @include _1024{
+      padding: 0 20px;
+    }
+    @include _600{
+      padding: 0 ;
+    }
+  }
+  &__center{
+    width: 50%;
+    @include flex_custom();
+    @include _600{
+      width: 90%;
+      margin: auto;
+    }
+  }
+  &__col{
+    display: flex;
+    flex-direction: column
+  }
+  &__w80{
+    width: 80%;
+    margin: auto;
+    @include _768{
+      width: 95%;
+    }
+  }
+  &__noise{
+    border-radius: 20px;
+    width: 80%;
+    padding: 20px;
+    margin: auto;
+    background: url("../../../../public/img/texture/noisy-texture-100x100-o5-d19-c-000000-t0.png") repeat;
+    @include _600{
+      width: 100%;
+      margin: 10px auto;
+    }
+  }
+  &__h{
+    font-size: 35px;
+    color: #ffffff;
+    font-weight: 800;
+    @include _1170{
+      font-size: 20px;
+      line-height: 23px;
+    }
+    @include _768{
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  &__p{
+    font-size: 25px;
+    margin-top: 20px;
+    line-height: 35px;
+    @include _1366{
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @include _1170{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include _768{
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 5px;
+    }
+  }
+  &__btn{
+      margin-top: 20px;
+      button{
+        padding: 10px 20px;
+        background-color: rgba(25,25,25,255);
+        border-radius: 10px;
+        &:hover{
+          background-color: rgb(45, 45, 45);
+        }
+        @include _768{
+          padding: 10px;
+          font-size: 10px;
+        }
+    }
+    @include _768{
+      margin-top: 0;
+    }
+  }
+}
+.reverse{
+  @include _600{
+    flex-direction: column-reverse !important;
+  }
+}

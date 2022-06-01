@@ -1,0 +1,123 @@
+@import '../../mixins/flexes';
+@import '../../variables/colors';
+@import "../../media/media-mixins";
+
+.blog{
+  @include flex_space();
+  &__content{
+    line-height: 30px;
+    padding: 100px;
+    margin-left: 20%;
+    width: 80%;
+    background-color: #111111;
+    @include _1024{
+      padding: 30px;
+      margin-left: 25%;
+      font-size: 14px;
+    }
+    @include _979{
+      padding:  10px 15px;
+      margin-left: 30%;
+    }
+    @include _768{
+      padding: 80px 50px;
+      margin-left: 0;
+      width: 100%;
+    }
+    @include _480{
+      padding: 80px 20px;
+    }
+  }
+}
+.side__btn{
+  position: fixed;
+  top: 15px;
+  left: 70px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 4;
+}
+#side__toggle{
+  top: 15px;
+  left: 70px;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  opacity: 0;
+  z-index: 5;
+  cursor: pointer;
+}
+#side__toggle:checked ~ .side_bar {
+  left: 0 !important;
+}
+.side_bar{
+  z-index: 2;
+  position: fixed;
+  width: 20%;
+  background-color: #222222;
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  @include _1170{
+    width: 25%;
+    font-size: 14px;
+  }
+  @include _979{
+    width: 30%;
+  }
+  @include _768{
+    padding-top: 50px;
+    transition-duration: .25s;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 300px;
+    height: 100%;
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, .2) inset;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f3fb00, #ea7d00);
+    border-radius: 10px;
+  }
+
+  .list{
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      padding: 10px 0;
+      color: #6d7070;
+      width: 100%;
+      &:hover{
+        background-color: #464444;
+      }
+    }
+    &__icon{
+      font-size: 30px;
+      margin: 4px;
+    }
+    .active_item{
+      background-color: $gold;
+      color: #000000;
+    }
+  }
+}

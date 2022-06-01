@@ -1,0 +1,26 @@
+@import "../media/media-mixins";
+.tb{
+  width: 90%;
+  margin: 50px auto;
+  @include _768{
+    margin: auto;
+    padding: 50px 0;
+  }
+  &__field{
+    width: 100%;
+    margin: 20px 0 !important;
+  }
+  &__cell{
+    width: 20%;
+  }
+  &__head{
+    background-color: #111111;
+    color: #fff7f7 !important;
+  }
+  &__absolute{
+    @include _768{
+      position: absolute;
+      height: 60px
+    }
+  }
+}

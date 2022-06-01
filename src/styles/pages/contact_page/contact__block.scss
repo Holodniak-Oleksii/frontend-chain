@@ -1,0 +1,68 @@
+@import "../../media/media-mixins";
+
+.contact{
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(155deg, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 50%, rgba(255,255,255,0) 50%, rgba(18,18,18,1) 50%, rgba(18,18,18,1) 100%);
+
+  &__form{
+    margin-top: 25vh;
+    height: 400px;
+    display: flex;
+    padding: 20px;
+    box-shadow: 0 0 50px 5px rgba(0,0,0,0.56);
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50%;
+    @include _1024{
+      width: 80%;
+    }
+    @include _768{
+      margin-top: 18vh;
+    }
+    @include _520{
+      width: 90%;
+    }
+    @include _480{
+      margin-top: 15vh;
+    }
+  }
+  &__btn{
+    width: 100%;
+    button {
+      width: 100%;
+      color: #9a9292;
+      background-color: #222;
+      padding: 15px 0;
+      &:hover{
+        background-color: #333232;
+      }
+    }
+  }
+  .css-1480iag-MuiInputBase-root-MuiInput-root:before {
+    border-color: #8a8585
+  }
+  &__field{
+    label{
+      color: white;
+    };
+    input{
+      color: white;
+      border-bottom: white;
+    };
+    fieldset{border-color: #ffffff}
+  }
+  &__label{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    @include _480{
+      font-size: 18px;
+    }
+  }
+  &__flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

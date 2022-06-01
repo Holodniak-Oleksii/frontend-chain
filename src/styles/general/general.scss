@@ -1,0 +1,33 @@
+@import "../media/media-mixins";
+a{
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  caret-color: #2c0303;
+}
+body{
+  background-color: #020202;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 1rem
+}
+
+ol {
+  counter-reset: li; /* Initiate a counter */
+  list-style: none; /* Remove default numbering */
+  padding: 0;
+  margin-bottom: 4em;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+  @include _768{
+    width: 95%;
+  }
+}
+
+ol ol {
+  margin: 0 0 0 2em; /* Add some left margin for inner lists */
+}

@@ -1,0 +1,29 @@
+@import "../../media/media-mixins";
+.watch-list{
+  font-weight: 500;
+  font-size: 23px;
+  color: #b6b6b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  @include _768{
+    font-size: 16px;
+  }
+  @include _480{
+    width: 100%;
+  }
+  &__container{
+    width: 100%;
+    display: flex;
+    @include _480{
+      flex-direction: column;
+    }
+  }
+  &__field{
+    width: 75%;
+    @include _480{
+      width: 100%;
+    }
+  }
+}

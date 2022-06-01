@@ -1,0 +1,51 @@
+@import "../media/media-mixins";
+
+.input__log{
+  margin-bottom: 35px;
+  display: block;
+  height: 43px;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  background-color: #111111FF;
+  box-shadow: -6px -3px 8px 2px rgba(0, 0, 0, 0.27), 6px 3px 13px 5px rgba(37, 37, 37, 0.1);
+  font-size: 14px;
+  font-weight: 300;
+  outline: none;
+  color: #dcdbdb;
+}
+INPUT[type="text"] {
+  padding-left: 10px;
+}
+INPUT[type="password"] {
+  padding-left: 10px;
+}
+::placeholder{
+  color: #dcdbdb;
+  padding-left: 10px;
+}
+.btn__log{
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background: #111111FF;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+  box-shadow: -6px -3px 13px 5px rgba(37, 37, 37, 0.1), 6px 3px 13px 5px rgba(0, 0, 0, 0.27);
+  border-radius: 30px;
+  color: #dcdbdb;
+  font-family:sans-serif;
+  transition: all 0.5s ease-out;
+}
+.btn__log:hover{
+  box-shadow: -6px -3px 13px 5px rgba(0, 0, 0, 0.27), 6px 3px 13px 5px rgba(37, 37, 37, 0.1);
+}
+.login__label{
+  button{
+    font-size: 16px;
+    @include _480{
+      font-size: 12px;
+    }
+  }
+}

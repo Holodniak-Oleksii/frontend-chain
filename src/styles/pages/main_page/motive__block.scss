@@ -1,0 +1,62 @@
+@import '../../mixins/flexes';
+@import "../../media/media-mixins";
+@import '../../variables/colors';
+
+.motive{
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: 2px;
+  background-color: rgba(25,25,25,255);
+  border-radius: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  @include _520{
+    flex-direction: column;
+  }
+  &__gradient{
+    width: 80%;
+    height: 240px;
+    position: relative;
+    background: $gradient_gray;
+    margin: 50px auto;
+    box-sizing: border-box;
+    color: #FFF;
+    background-clip: padding-box;
+    border: solid 2px transparent;
+    border-radius: 1em;
+    @include _600{
+      height: 180px;
+    }
+  }
+  &__flex{
+    @include flex_space();
+  }
+  &__h{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    width: 40%;
+    @include _768{
+      font-size: 14px;
+    }
+    @include _480{
+      width: 40%;
+      font-size: 14px;
+    }
+    @include _520{
+      width: 80%;
+    }
+  }
+  &__btn{
+    button{
+      padding: 10px 20px;
+      background-color: rgb(195,210,28);
+      border-radius: 10px;
+      &:hover{
+        background-color: rgb(255, 241, 0);
+      }
+    }
+  }
+}

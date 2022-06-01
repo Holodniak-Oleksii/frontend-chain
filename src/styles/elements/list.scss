@@ -1,0 +1,47 @@
+@import '../variables/colors';
+@import "../media/media-mixins";
+
+.push {
+  list-style: none;
+
+  @include _520{
+    padding: 2px;
+  }
+}
+.push li {
+  position: relative;
+  padding: 20px 0 20px 40px;
+  color: $gold;
+  font-variant: small-caps;
+  font-weight: bold;
+  cursor: pointer;
+  @include _768{
+    font-size: 12px;
+    padding: 10px 0 10px 20px;
+  }
+}
+.push li:before {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4F5151;
+  content: "";
+  left: 0;
+  transition: .3s ease-in-out;
+  top: 27px;
+  @include _768{
+    top: 12px;
+  }
+}
+.push li:after {
+  position: absolute;
+  border-left: 1px dotted #4F5151;
+  width: 1px;
+  bottom: -12px;
+  content: "";
+  left: 3px;
+  top: 48px;
+}
+.push li:hover:before{box-shadow: 0 0 0 10px rgba(0,0,0,.2)}
+.push li:last-child:after {content: none;}

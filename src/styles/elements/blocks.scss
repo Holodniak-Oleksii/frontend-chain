@@ -1,0 +1,50 @@
+@import '../variables/colors';
+@import '../mixins/flexes';
+.gradient_block{
+  background: $gradient_black;
+}
+.color_back{
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__table{
+  width: 89vw;
+  margin: 10px auto;
+  border-radius: 20px;
+  background-color: #222;
+  display: flex;
+  justify-content: center
+}
+.footer__padin{
+  width: 89vw;
+  margin: 10px auto;
+  border-radius: 10px;
+  background-color: #131313;
+  display: flex;
+  justify-content: center
+}
+
+.new-footer-color{
+  background-color: #222222;
+}
+.menu{
+  .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper{
+    background-color: #222222!important;
+  }
+}
+.page404{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100vh;
+  color: #FFC60B;
+  background-color: #0e0f12;
+  flex-direction: column;
+}
+.admin{
+  padding-top: 15vh;
+}

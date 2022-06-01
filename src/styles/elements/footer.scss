@@ -1,0 +1,66 @@
+@import '../mixins/flexes';
+@import '../variables/colors';
+@import "../media/media-mixins";
+
+.footer{
+  &__flex{
+    @include flex_space();
+  }
+  &__w{
+    width: 80%;
+    margin: auto;
+    @include _1170{
+      width: 90%;
+    }
+    @include _1024{
+      flex-direction: column;
+    }
+  }
+  &__col{
+    width: 40%;
+    @include _1024{
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+    }
+    @include _520{
+       display: flex;
+       width: 100%;
+       flex-direction: column;
+     }
+  }
+  &__start{
+    display: flex;
+    align-items: center;
+  }
+  &__open{
+    display: flex;
+    flex-direction: column;
+    @include _520{
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  &__img{
+    width: 8%;
+    margin-right: 5px;
+    @include _850{
+      width: 30%;
+    }
+    @include _520{
+      width: 10%;
+    }
+  }
+}
+.icon_space{
+  width: 30%;
+  margin: 20px 0;
+  @include flex_space();
+  align-items: flex-start;
+  @include _1024{
+    margin: 0;
+  }
+}
